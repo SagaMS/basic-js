@@ -16,7 +16,7 @@ const chainMaker = {
     return this;
   },
   removeLink(position) {
-    if ((isNaN(position) || typeof position ==='string') || !Number.isInteger(position) || position > this.getLength()) {
+    if ((isNaN(position) || typeof position ==='string') || !Number.isInteger(position) || position > this.getLength() ||typeof position ==='string'|| position<=0) {
       this.chain = [];
       throw new Error("You can't remove incorrect link!");
     }
